@@ -8,7 +8,7 @@ class DataBase{
     private $host = "localhost";
     private $username = "root";
     private $password = "";
-    private $database = "agenda";
+    private $database = "agendamento";
 
     private function __construct()
     {

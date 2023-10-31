@@ -4,6 +4,7 @@ class Paciente{
     private int $id;
     private string $nome;
     private string $dataNascimento;
+    private string $genero;
     private string $telefone;
     private string $endereco;
     private string $email;
@@ -89,6 +90,18 @@ class Paciente{
     public function setSenha(string $senha): self
     {
         $this->senha = $senha;
+
+        return $this;
+    }
+
+    public function getGenero(): string
+    {
+        return $this->genero;
+    }
+
+    public function setGenero(string $genero): self
+    {
+        $this->genero = $genero;
 
         return $this;
     }
