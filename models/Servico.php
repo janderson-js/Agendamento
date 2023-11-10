@@ -6,7 +6,8 @@ class Servico{
     private string $nome;
     private string $descricao;
     private string $valor;
-
+    private string $imagensURL = array();
+    private string $videosURL = array();
     
     public function getId(): int
     {
@@ -52,6 +53,30 @@ class Servico{
     public function setValor(string $valor): self
     {
         $this->valor = $valor;
+
+        return $this;
+    }
+
+    public function getImagensURL(): string
+    {
+        return $this->imagensURL;
+    }
+
+    public function setImagensURL(string $imagensURL): self
+    {
+        $this->imagensURL = $imagensURL;
+
+        return $this;
+    }
+
+    public function getVideosURL(): string
+    {
+        return $this->videosURL;
+    }
+
+    public function setVideosURL(string $videosURL): self
+    {
+        $this->videosURL = $videosURL;
 
         return $this;
     }

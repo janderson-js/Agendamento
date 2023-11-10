@@ -7,7 +7,7 @@ class Consulta{
     private Funcionario $funcionario;
     private DateTime $data_hora;
     private Servico $servico;
-    
+    private string $descricao;
     
     public function getId(): int
     {
@@ -65,6 +65,18 @@ class Consulta{
     public function setServico(Servico $servico): self
     {
         $this->servico = $servico;
+
+        return $this;
+    }
+
+    public function getDescricao(): string
+    {
+        return $this->descricao;
+    }
+
+    public function setDescricao(string $descricao): self
+    {
+        $this->descricao = $descricao;
 
         return $this;
     }

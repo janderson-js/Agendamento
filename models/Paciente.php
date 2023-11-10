@@ -1,6 +1,7 @@
 <?php
 
 class Paciente{
+
     private int $id;
     private string $nome;
     private string $dataNascimento;
@@ -9,6 +10,8 @@ class Paciente{
     private string $endereco;
     private string $email;
     private string $senha;
+    private string $imagemPacienteURL;
+    private InformacaoMedica $informacaoMedica;
 
     public function getId(): int
     {
@@ -102,6 +105,30 @@ class Paciente{
     public function setGenero(string $genero): self
     {
         $this->genero = $genero;
+
+        return $this;
+    }
+
+    public function getImagemPacienteURL(): string
+    {
+        return $this->imagemPacienteURL;
+    }
+
+    public function setImagemPacienteURL(string $imagemPacienteURL): self
+    {
+        $this->imagemPacienteURL = $imagemPacienteURL;
+
+        return $this;
+    }
+
+    public function getInformacaoMedica(): InformacaoMedica
+    {
+        return $this->informacaoMedica;
+    }
+
+    public function setInformacaoMedica(InformacaoMedica $informacaoMedica): self
+    {
+        $this->informacaoMedica = $informacaoMedica;
 
         return $this;
     }

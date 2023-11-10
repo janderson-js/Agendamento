@@ -6,7 +6,10 @@ class Funcionario{
     private string $status;
     private string $matricula;
     private string $senha;
-    private string $especializacao;
+    private string $especializacao = array();
+    private string $telefone;
+    private string $endereco;
+    private string $imagemFuncionarioURL;
     
 
     public function getId(): int
@@ -65,6 +68,42 @@ class Funcionario{
     public function setSenha(string $senha): self
     {
         $this->senha = $senha;
+
+        return $this;
+    }
+
+    public function getTelefone(): string
+    {
+        return $this->telefone;
+    }
+
+    public function setTelefone(string $telefone): self
+    {
+        $this->telefone = $telefone;
+
+        return $this;
+    }
+
+    public function getEndereco(): string
+    {
+        return $this->endereco;
+    }
+
+    public function setEndereco(string $endereco): self
+    {
+        $this->endereco = $endereco;
+
+        return $this;
+    }
+
+    public function getImagemFuncionarioURL(): string
+    {
+        return $this->imagemFuncionarioURL;
+    }
+
+    public function setImagemFuncionarioURL(string $imagemFuncionarioURL): self
+    {
+        $this->imagemFuncionarioURL = $imagemFuncionarioURL;
 
         return $this;
     }
